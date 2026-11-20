@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Wajid | Marketing & Supply Chain Specialist</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                        },
+                        accent: {
+                            purple: '#8b5cf6',
+                            pink: '#ec4899',
+                            cyan: '#06b6d4',
+                        }
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: 0.4 },
+                            '50%': { opacity: 0.8 },
+                        }
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseGlow 4s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Ambient Gradient Orbs -->
+    <div class="fixed top-0 left-1/4 -z-10 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl animation-pulse-slow pointer-events-none"></div>
+    <div class="fixed bottom-10 right-10 -z-10 w-96 h-96 bg-accent-purple/20 rounded-full blur-3xl animation-float pointer-events-none"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav border-b border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+                    AW
+                </div>
+                <div>
+                    <span class="font-bold text-lg leading-none tracking-tight block">Abdul Wajid</span>
+                    <span class="text-xs text-brand-600 dark:text-brand-400 font-semibold tracking-wider uppercase"></span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+                <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Education</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all transform hover:scale-105" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                </button>
+
+                <a href="#contact" class="hidden sm:inline-flex px-5 py-2.5 rounded-xl gradient-bg text-white font-semibold text-sm shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all">
+                    Get in Touch
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 px-6 py-4 space-y-3 transition-all duration-300">
+            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-brand-600">About</a>
+            <a href="#experience" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-brand-600">Experience</a>
+            <a href="#skills" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-brand-600">Skills</a>
+            <a href="#education" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-brand-600">Education</a>
+            <a href="#contact" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-brand-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Intro Content -->
+                <div class="lg:col-span-7 space-y-6 reveal active">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-800/60 text-brand-600 dark:text-brand-300 text-xs font-bold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        Available for Supply Chain & Marketing Roles
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-none">
+                        <span class="gradient-text">Marketing</span> & Supply Chain.
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl font-normal leading-relaxed">
+                        Hi! I'm <strong class="text-slate-900 dark:text-white font-semibold">Abdul Wajid</strong>. A results-oriented professional specializing in end-to-end e-commerce fulfillment, inventory optimization, cross-functional procurement, and digital brand growth.
+                    </p>
+
+                    <!-- Contact Pill Badges -->
+                    <div class="flex flex-wrap gap-4 text-xs font-medium text-slate-600 dark:text-slate-300 pt-2">
+                        <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-200/60 dark:bg-slate-800/60">
+                            <i class="fa-solid fa-location-dot text-brand-500"></i> Karachi, Pakistan
+                        </span>
+                        <a href="mailto:wajid.ab090@gmail.com" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-200/60 dark:bg-slate-800/60 hover:bg-brand-500 hover:text-white transition-colors">
+                            <i class="fa-solid fa-envelope text-brand-500"></i> wajid.ab090@gmail.com
+                        </a>
+                        <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-200/60 dark:bg-slate-800/60">
+                            <i class="fa-solid fa-phone text-brand-500"></i> 03123822523
+                        </span>
+                    </div>
+
+                    <!-- Call to Actions -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#experience" class="px-7 py-3.5 rounded-xl gradient-bg text-white font-bold text-sm shadow-xl shadow-brand-500/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                            Explore Experience <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                        <a href="#contact" class="px-7 py-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white font-bold text-sm shadow-md hover:bg-slate-100 dark:hover:bg-slate-700 hover:scale-105 active:scale-95 transition-all">
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Profile Picture Card -->
+                <div class="lg:col-span-5 relative flex justify-center reveal delay-200 active">
+                    <div class="relative max-w-sm w-full profile-img-container">
+                        <!-- Background Glow Accent -->
+                        <div class="absolute -inset-2 gradient-bg rounded-3xl blur-xl opacity-40 animate-pulse"></div>
+
+                        <!-- Image Frame Card -->
+                        <div class="relative rounded-3xl glass-card p-3 shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                            <img src="profile.png" alt="Abdul Wajid" class="w-full h-[400px] object-cover rounded-2xl shadow-inner hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Floating Badge on Picture -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-card backdrop-blur-md border border-white/20 shadow-lg flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-lg shadow">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Abdul Wajid</h4>
+                                    <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">Marketing & Supply Chain</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics Ribbon -->
+    <section class="py-12 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1 reveal">
+                    <p class="text-3xl sm:text-4xl font-extrabold gradient-text">3+</p>
+                    <p class="text-xs uppercase tracking-widest font-semibold text-slate-500">Key Roles Held</p>
+                </div>
+                <div class="space-y-1 reveal delay-100">
+                    <p class="text-3xl sm:text-4xl font-extrabold gradient-text">15+</p>
+                    <p class="text-xs uppercase tracking-widest font-semibold text-slate-500">Core Competencies</p>
+                </div>
+                <div class="space-y-1 reveal delay-200">
+                    <p class="text-3xl sm:text-4xl font-extrabold gradient-text">100%</p>
+                    <p class="text-xs uppercase tracking-widest font-semibold text-slate-500">End-to-End Dispatch</p>
+                </div>
+                <div class="space-y-1 reveal delay-300">
+                    <p class="text-3xl sm:text-4xl font-extrabold gradient-text">BBA</p>
+                    <p class="text-xs uppercase tracking-widest font-semibold text-slate-500">Business Administration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Professional Summary</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">A Dual-Driven Executive in Marketing & Logistics</p>
+                <div class="w-16 h-1.5 gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/60 dark:border-slate-800 shadow-lg reveal">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-boxes-packing"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Supply Chain & E-Commerce</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Proven expertise managing the complete E-commerce order cycle at Tabros Pharma—from placement, stock allocation, and dispatch to courier tracking and inventory return reconciliation.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/60 dark:border-slate-800 shadow-lg reveal delay-100">
+                    <div class="w-14 h-14 rounded-xl bg-accent-purple/10 text-accent-purple flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Brand & Product Innovation</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Collaborates closely with vendors and Business Development to formulate, customize, and launch new skincare products tailored to competitive market trends.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/60 dark:border-slate-800 shadow-lg reveal delay-200">
+                    <div class="w-14 h-14 rounded-xl bg-accent-pink/10 text-accent-pink flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Systems & Data Mastery</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Skilled in CRM & ICRM operations to maintain stock issuance records, sales forecasting, invoice generation, and comprehensive Excel analytics.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-24 bg-slate-100/50 dark:bg-slate-900/40 relative border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Career History</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Professional Experience</p>
+                <div class="w-16 h-1.5 gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="max-w-4xl mx-auto space-y-8">
+
+                <!-- Job 1 -->
+                <div class="relative pl-6 sm:pl-10 border-l-2 border-brand-500/40 space-y-4 reveal">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white text-xs shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="p-6 sm:p-8 rounded-2xl glass-card shadow-xl border border-slate-200/70 dark:border-slate-800">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">MTO - Marketing & Supply Chain</h3>
+                                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Tabros Pharma (Pvt.) Ltd.</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/80 border border-brand-200 dark:border-brand-800 text-brand-600 dark:text-brand-300 text-xs font-bold">
+                                August 2025 – Present
+                            </span>
+                        </div>
+
+                        <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-brand-500 text-xs mt-1"></i>
+                                <span>Maintain stock reports and process purchase orders based on strategic demand forecasts.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-brand-500 text-xs mt-1"></i>
+                                <span>Coordinate with vendors and Supply Chain teams to ensure smooth procurement and launch of skincare lines.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-brand-500 text-xs mt-1"></i>
+                                <span>Manage end-to-end E-commerce order fulfillment cycle: order intake, packing, dispatch, and courier tracking.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-brand-500 text-xs mt-1"></i>
+                                <span>Operate ICRM & CRM systems for sales monitoring, invoice generation, stock issuance, and inventory returns management.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-brand-500 text-xs mt-1"></i>
+                                <span>Work cross-functionally with Business Development and digital agencies for social media campaigns, packaging artwork, and brand activities.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-6 sm:pl-10 border-l-2 border-slate-300 dark:border-slate-800 space-y-4 reveal delay-100">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 text-xs">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div class="p-6 sm:p-8 rounded-2xl glass-card shadow-lg border border-slate-200/70 dark:border-slate-800">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Intern - Marketing</h3>
+                                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Tabros Pharma (Pvt.) Ltd.</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">
+                                June 2025 – July 2025
+                            </span>
+                        </div>
+
+                        <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-slate-400 text-xs mt-1"></i>
+                                <span>Conducted comprehensive market research on competitor skincare categories, pricing models, and promotional strategies.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-slate-400 text-xs mt-1"></i>
+                                <span>Supported sales forecasting analytics and contributed to initial discussions regarding company website revamp and product packaging artwork.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative pl-6 sm:pl-10 border-l-2 border-slate-300 dark:border-slate-800 space-y-4 reveal delay-200">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 text-xs">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <div class="p-6 sm:p-8 rounded-2xl glass-card shadow-lg border border-slate-200/70 dark:border-slate-800">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Visiting Senior Teacher - Mathematics & Computer Science</h3>
+                                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">KCS</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">
+                                March 2024 – Present
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Core Skills Section (Interactive Filterable Grid) -->
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3 reveal">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Expertise & Tools</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Core Skills Matrix</p>
+                <div class="w-16 h-1.5 gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Filter Category Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10 reveal delay-100">
+                <button class="skill-filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-md shadow-brand-500/20" data-filter="all">All Skills</button>
+                <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700" data-filter="supply">Supply Chain & Fulfillment</button>
+                <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700" data-filter="marketing">Marketing & Sales</button>
+                <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700" data-filter="systems">Systems & Analytics</button>
+            </div>
+
+            <!-- Skills Pills Grid -->
+            <div id="skillsGrid" class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto reveal delay-200">
+                
+                <!-- Supply Chain Skills -->
+                <div class="skill-pill supply p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-boxes-stacked text-brand-500"></i>
+                    <span class="text-sm font-semibold">Inventory Management & Control</span>
+                </div>
+                <div class="skill-pill supply p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-truck-ramp-box text-brand-500"></i>
+                    <span class="text-sm font-semibold">Order Fulfillment & Dispatch</span>
+                </div>
+                <div class="skill-pill supply p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-handshake text-brand-500"></i>
+                    <span class="text-sm font-semibold">Vendor Management & Coordination</span>
+                </div>
+                <div class="skill-pill supply p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-cart-flatbed text-brand-500"></i>
+                    <span class="text-sm font-semibold">Procurement & Purchase Orders</span>
+                </div>
+                <div class="skill-pill supply p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-truck-fast text-brand-500"></i>
+                    <span class="text-sm font-semibold">Logistics & Courier Tracking</span>
+                </div>
+                <div class="skill-pill supply p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-warehouse text-brand-500"></i>
+                    <span class="text-sm font-semibold">Warehouse & Stock Control</span>
+                </div>
+
+                <!-- Marketing Skills -->
+                <div class="skill-pill marketing p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-magnifying-glass-chart text-accent-purple"></i>
+                    <span class="text-sm font-semibold">Market Research & Competitor Analysis</span>
+                </div>
+                <div class="skill-pill marketing p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-bag-shopping text-accent-purple"></i>
+                    <span class="text-sm font-semibold">E-commerce Operations</span>
+                </div>
+                <div class="skill-pill marketing p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-people-group text-accent-purple"></i>
+                    <span class="text-sm font-semibold">Cross-Functional Coordination</span>
+                </div>
+                <div class="skill-pill marketing p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-headset text-accent-purple"></i>
+                    <span class="text-sm font-semibold">Customer Service & Negotiation</span>
+                </div>
+
+                <!-- Systems Skills -->
+                <div class="skill-pill systems p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-laptop-code text-accent-pink"></i>
+                    <span class="text-sm font-semibold">CRM & ICRM Systems</span>
+                </div>
+                <div class="skill-pill systems p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-file-excel text-accent-pink"></i>
+                    <span class="text-sm font-semibold">Excel Analytics & Stock Reporting</span>
+                </div>
+                <div class="skill-pill systems p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-rotate-left text-accent-pink"></i>
+                    <span class="text-sm font-semibold">Stock Reconciliation & Inventory Returns</span>
+                </div>
+                <div class="skill-pill systems p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-sm">
+                    <i class="fa-solid fa-chart-column text-accent-pink"></i>
+                    <span class="text-sm font-semibold">Sales & Inventory Forecasting</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 bg-slate-100/50 dark:bg-slate-900/40 relative border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Academic Background</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Education & Qualifications</p>
+                <div class="w-16 h-1.5 gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Education Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Degree 1 -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/70 dark:border-slate-800 shadow-xl flex items-start gap-5 reveal">
+                    <div class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Sept 2024 – In Progress</span>
+                        <h3 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">Bachelor's Degree in Business Administration</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Iqra University</p>
+                    </div>
+                </div>
+
+                <!-- Degree 2 -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/70 dark:border-slate-800 shadow-xl flex items-start gap-5 reveal delay-100">
+                    <div class="w-14 h-14 rounded-xl bg-slate-800 text-white flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">2022 – 2024</span>
+                        <h3 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">ADP, Accounting & Finance</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Iqra University</p>
+                    </div>
+                </div>
+
+                <!-- Degree 3 (Intermediate) -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/70 dark:border-slate-800 shadow-xl flex items-start gap-5 reveal delay-200">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">2018 – 2021</span>
+                        <h3 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">Intermediate</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Govt. National College</p>
+                    </div>
+                </div>
+
+                <!-- Degree 4 (Matriculation) -->
+                <div class="p-8 rounded-2xl glass-card border border-slate-200/70 dark:border-slate-800 shadow-xl flex items-start gap-5 reveal delay-300">
+                    <div class="w-14 h-14 rounded-xl bg-slate-800 text-white flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">2016 – 2017</span>
+                        <h3 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">Matriculation</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">The Tree Of Life Scholastic Seminary</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Get In Touch</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Let's Connect</p>
+                <div class="w-16 h-1.5 gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                
+                <!-- Contact Direct Details -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-4 shadow-lg">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Direct Contact</h3>
+                        
+                        <div class="space-y-4 text-sm">
+                            <a href="mailto:wajid.ab090@gmail.com" class="flex items-center gap-4 p-3 rounded-xl bg-slate-100/60 dark:bg-slate-900/50 hover:text-brand-600 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-600 dark:text-brand-400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <span class="font-medium">wajid.ab090@gmail.com</span>
+                            </a>
+
+                            <div class="flex items-center gap-4 p-3 rounded-xl bg-slate-100/60 dark:bg-slate-900/50">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <span class="font-medium">03123822523</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-3 rounded-xl bg-slate-100/60 dark:bg-slate-900/50">
+                                <div class="w-10 h-10 rounded-lg bg-accent-purple/10 flex items-center justify-center text-accent-purple">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span class="font-medium">House# k-314, K-area, Korangi#5, Karachi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Message Form -->
+                <div class="lg:col-span-7 reveal delay-200">
+                    <form id="contactForm" class="p-8 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 shadow-xl space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Your Name</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Your Email</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Subject</label>
+                            <input type="text" required placeholder="Job Inquiry / Collaboration" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Message</label>
+                            <textarea rows="4" required placeholder="Hello Abdul, I'd like to discuss an opportunity..." class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl gradient-bg text-white font-bold text-sm shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center justify-center gap-2">
+                            Send Message <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© <span id="year"></span> Abdul Wajid. All rights reserved. Designed for Marketing & Supply Chain Portfolio.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic & Animations JavaScript -->
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll Reveal Intersection Observer
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Theme Toggle Functionality
+        const themeToggleBtn = document.getElementById('themeToggle');
+        
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Mobile Menu Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Skills Matrix Interactive Filter
+        const filterBtns = document.querySelectorAll('.skill-filter-btn');
+        const skillPills = document.querySelectorAll('.skill-pill');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-600', 'text-white', 'shadow-md');
+                    b.classList.add('bg-slate-200/70', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+                });
+
+                btn.classList.add('active', 'bg-brand-600', 'text-white', 'shadow-md');
+                btn.classList.remove('bg-slate-200/70', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                skillPills.forEach(pill => {
+                    if (filterValue === 'all' || pill.classList.contains(filterValue)) {
+                        pill.style.display = 'flex';
+                        pill.style.opacity = '1';
+                        pill.style.transform = 'scale(1)';
+                    } else {
+                        pill.style.opacity = '0';
+                        pill.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            if (pill.style.opacity === '0') pill.style.display = 'none';
+                        }, 200);
+                    }
+                });
+            });
+        });
+
+        // Contact Form Submission Handler
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> Message Sent Successfully!`;
+            submitBtn.classList.remove('gradient-bg');
+            submitBtn.classList.add('bg-emerald-500');
+
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.classList.remove('bg-emerald-500');
+                submitBtn.classList.add('gradient-bg');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
